@@ -509,6 +509,59 @@ class _HomeState extends State<Home> {
                 ),
           const SizedBox(
             height: 40,
+          ),
+          Container(
+            height: width > 600 ? 300 : 250,
+            width: width,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topRight:
+                    width > 600 ? Radius.circular(100) : Radius.circular(50),
+                bottomLeft:
+                    width > 600 ? Radius.circular(100) : Radius.circular(50),
+              ),
+              color: Color(0xffffb38a),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'Take Your Health to Next \nLevel!',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                      fontSize: width > 600 ? 30 : 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'You can buy Sesame Oil offline at best prices on MR oil mill',
+                  style: GoogleFonts.poppins(
+                      fontSize: width > 600 ? 15 : 12,
+                      color: Colors.black87,
+                      fontWeight: FontWeight.normal),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CircleAvatar(
+                  backgroundColor: Colors.deepOrange,
+                  radius: width > 600 ? 25 : 20,
+                  child: const Center(
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 40,
           )
         ],
       ),
