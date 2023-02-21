@@ -690,10 +690,205 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Container(),
+          width > 1000
+              ? Container(
+                  height: 500,
+                  width: width,
+                  decoration: BoxDecoration(
+                    color: const Color(0xffffb38a).withOpacity(1),
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50)),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 80,
+                        decoration: BoxDecoration(
+                            color: Colors.deepOrange,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Center(child: Icon(Icons.message)),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'What Our Customers Are Saying?',
+                        style: GoogleFonts.poppins(
+                            fontSize: width > 600 ? 30 : 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w900),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Textmonial(
+                            width: width,
+                            name: 'Sudha',
+                            place: 'Trichy',
+                            text:
+                                'I am using this oil from 2018. I am addict for this oil. Its smell and taste was good.',
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          Textmonial(
+                            width: width,
+                            name: 'Jagan',
+                            place: 'Trichy',
+                            text:
+                                'Its good for health. Mr oils give latest manufactured oil. So always i am using fresh product.',
+                          ),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          Textmonial(
+                            width: width,
+                            name: 'Kavitha',
+                            place: 'Chennai',
+                            text:
+                                'This sesame oil from organic product. This product was trusted product. So give some good health for me. ',
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              : Container(
+                  padding: const EdgeInsets.all(50),
+                  width: width,
+                  decoration: BoxDecoration(
+                    color: const Color(0xffffb38a).withOpacity(1),
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(50),
+                        topRight: Radius.circular(50)),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 80,
+                        decoration: BoxDecoration(
+                            color: Colors.deepOrange,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Center(child: Icon(Icons.message)),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'What Our Customers Are Saying?',
+                        style: GoogleFonts.poppins(
+                            fontSize: width > 600 ? 30 : 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w900),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Textmonial(
+                        width: width,
+                        name: 'Sudha',
+                        place: 'Trichy',
+                        text:
+                            'I am using this oil from 2018. I am addict for this oil. Its smell and taste was good.',
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Textmonial(
+                        width: width,
+                        name: 'Jagan',
+                        place: 'Trichy',
+                        text:
+                            'Its good for health. Mr oils give latest manufactured oil. So always i am using fresh product.',
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Textmonial(
+                        width: width,
+                        name: 'Kavitha',
+                        place: 'Chennai',
+                        text:
+                            'This sesame oil from organic product. This product was trusted product. So give some good health for me. ',
+                      ),
+                    ],
+                  ),
+                ),
+        ],
+      ),
+    );
+  }
+}
+
+class Textmonial extends StatelessWidget {
+  const Textmonial({
+    super.key,
+    required this.width,
+    required this.text,
+    required this.name,
+    required this.place,
+  });
+
+  final double width;
+  final String text;
+  final String name;
+  final String place;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          color: Color(0xffffb38a).withOpacity(1),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 10),
+              blurRadius: 10,
+              color: Colors.deepOrange.shade300,
+            ),
+          ]),
+      width: 300,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            text,
+            style: GoogleFonts.poppins(
+                fontSize: width > 600 ? 15 : 12,
+                color: Colors.black87,
+                fontWeight: FontWeight.normal),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            name,
+            style: GoogleFonts.poppins(
+                fontSize: width > 600 ? 18 : 15,
+                color: Colors.black,
+                fontWeight: FontWeight.bold),
+          ),
+          Text(
+            place,
+            style: GoogleFonts.poppins(
+                fontSize: width > 600 ? 15 : 12,
+                color: Colors.black87,
+                fontWeight: FontWeight.normal),
+          ),
         ],
       ),
     );
