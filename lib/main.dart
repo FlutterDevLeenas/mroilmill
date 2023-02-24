@@ -78,20 +78,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-        minTextAdapt: false,
-        builder: (context, child) {
-          return GetMaterialApp.router(
-            debugShowCheckedModeBanner: false,
-            // initialRoute: '/home',
-            getPages: appRoutes(),
-            title: 'MR Oil Mill',
-            routerDelegate: AppRouterDelegate(),
-            theme: ThemeData(
-              primarySwatch: Colors.deepOrange,
-            ),
-          );
-        });
+    return GetMaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      // initialRoute: '/home',
+      getPages: appRoutes(),
+      title: 'MR Oil Mill',
+      routerDelegate: AppRouterDelegate(),
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
+      ),
+    );
   }
 }
 

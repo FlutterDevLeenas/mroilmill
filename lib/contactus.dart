@@ -2,7 +2,6 @@ import 'dart:html';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mr_oil/widget/tabweb.dart';
@@ -60,7 +59,7 @@ class _ContactUsState extends State<ContactUs> {
         padding: const EdgeInsets.all(0),
         children: [
           SizedBox(
-            height: 20.h,
+            height: 20,
           ),
           DrawerTile(
             icon: const Icon(Icons.person),
@@ -133,15 +132,15 @@ class _ContactUsState extends State<ContactUs> {
       appBar: AppBar(
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
-        leadingWidth: 50.w,
-        toolbarHeight: 80.h,
+        leadingWidth: 50,
+        toolbarHeight: 80,
         leading: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: Image.asset(
             "assets/mroil.jpg",
             fit: BoxFit.contain,
-            height: 50.h,
-            width: 50.w,
+            height: 50,
+            width: 50,
           ),
         ),
         title: width > 800
