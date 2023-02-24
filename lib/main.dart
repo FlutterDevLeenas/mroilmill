@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,14 +10,20 @@ import 'package:mr_oil/controller.dart';
 import 'package:mr_oil/home.dart';
 import 'package:mr_oil/process.dart';
 import 'package:mr_oil/product.dart';
+import 'package:url_strategy/url_strategy.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(const MyApp());
 }
 
 appRoutes() => [
       GetPage(
-        name: '/home',
+        name: '/',
         page: () => const Home(),
         transition: Transition.fadeIn,
         transitionDuration: const Duration(milliseconds: 100),
@@ -53,6 +60,18 @@ appRoutes() => [
       ),
     ];
 
+class AppRouterDelegate extends GetDelegate {
+  @override
+  Widget build(BuildContext context) {
+    return Navigator(
+      onPopPage: (route, result) => route.didPop(result),
+      pages: currentConfiguration != null
+          ? [currentConfiguration!.currentPage!]
+          : [GetNavConfig.fromRoute('/')!.currentPage!],
+    );
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -62,13 +81,14 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
         minTextAdapt: false,
         builder: (context, child) {
-          return GetMaterialApp(
+          return GetMaterialApp.router(
             debugShowCheckedModeBanner: false,
-            initialRoute: '/home',
+            // initialRoute: '/home',
             getPages: appRoutes(),
             title: 'MR Oil Mill',
+            routerDelegate: AppRouterDelegate(),
             theme: ThemeData(
-              primarySwatch: Colors.blue,
+              primarySwatch: Colors.deepOrange,
             ),
           );
         });

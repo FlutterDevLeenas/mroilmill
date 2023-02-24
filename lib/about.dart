@@ -63,7 +63,7 @@ class _AboutState extends State<About> {
           DrawerTile(
             icon: const Icon(Icons.person),
             ontap: () {
-              Get.toNamed('/home');
+              Get.rootDelegate.toNamed('/');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -74,7 +74,7 @@ class _AboutState extends State<About> {
           DrawerTile(
             icon: const Icon(Icons.search),
             ontap: () {
-              Get.toNamed('/about');
+              Get.rootDelegate.toNamed('/about');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -85,7 +85,7 @@ class _AboutState extends State<About> {
           DrawerTile(
             icon: const Icon(Icons.add_box_outlined),
             ontap: () {
-              Get.toNamed('/products');
+              Get.rootDelegate.toNamed('/products');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -96,7 +96,7 @@ class _AboutState extends State<About> {
           DrawerTile(
             icon: const Icon(Icons.work_history_outlined),
             ontap: () {
-              Get.toNamed('/process');
+              Get.rootDelegate.toNamed('/process');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -107,7 +107,7 @@ class _AboutState extends State<About> {
           DrawerTile(
             icon: const Icon(Icons.event),
             ontap: () {
-              Get.toNamed('/benifits');
+              Get.rootDelegate.toNamed('/benifits');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -118,7 +118,7 @@ class _AboutState extends State<About> {
           DrawerTile(
             icon: const Icon(Icons.groups_outlined),
             ontap: () {
-              Get.toNamed('/contact');
+              Get.rootDelegate.toNamed('/contact');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -142,7 +142,7 @@ class _AboutState extends State<About> {
             width: 50.w,
           ),
         ),
-        title: width > 700
+        title: width > 800
             ? Row(
                 children: [
                   const Spacer(
@@ -150,7 +150,7 @@ class _AboutState extends State<About> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/home');
+                      Get.rootDelegate.toNamed('/');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -160,7 +160,7 @@ class _AboutState extends State<About> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/about');
+                      Get.rootDelegate.toNamed('/about');
                     },
                     child: const TabsWeb(
                       color: Colors.deepOrange,
@@ -170,7 +170,7 @@ class _AboutState extends State<About> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/products');
+                      Get.rootDelegate.toNamed('/products');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -180,7 +180,7 @@ class _AboutState extends State<About> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/process');
+                      Get.rootDelegate.toNamed('/process');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -190,7 +190,7 @@ class _AboutState extends State<About> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/benifits');
+                      Get.rootDelegate.toNamed('/benifits');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -200,7 +200,7 @@ class _AboutState extends State<About> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/contact');
+                      Get.rootDelegate.toNamed('/contact');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -212,7 +212,7 @@ class _AboutState extends State<About> {
               )
             : Container(),
         actions: [
-          width < 700
+          width < 800
               ? GestureDetector(
                   onTap: () {
                     _key.currentState!.openEndDrawer();
@@ -321,7 +321,7 @@ class _AboutState extends State<About> {
                                   height: 10,
                                 ),
                                 Text(
-                                  'MR Oil Mill is a transition of earlier S M S Oil Mill, the respective founders are Srinivasan M and Ranganathan M. As a start-up during early days the raw sesame seeds have been taken to the Mills that had fine machinery. As of now M R Oil Mill has endeavoured and toiled hard, as the result we have grown wider to use our own machineries to produce clear, healthy and pure sesame oil that is extracted from raw red, black and white sesamum indicum that is sesame seeds. The extra care comes with a double filtration process which brings out the right viscosity in a balanced ratio with pleasant, remarkably stable and edible oil.A healthy life and a healthy society behind the brand M R Oil Mill Pvt Ltd.',
+                                  'MR Oil Mill is a transition of earlier SMS Oil Mill, the respective founders are Srinivasan M and Renganathan M. As a start-up during early days the raw sesame seeds have been taken to the Mills that had fine machinery. As of now MR Oil Mill has endeavoured and toiled hard, as the result we have grown wider to use our own machineries to produce clear, healthy and pure sesame oil that is extracted from raw red, black and white sesamum indicum that is sesame seeds. The extra care comes with a double filtration process which brings out the right viscosity in a balanced ratio with pleasant, remarkably stable and edible oil. A healthy life and a healthy society behind the brand MR Oil Mill Pvt Ltd.',
                                   style: GoogleFonts.poppins(
                                       fontSize: width > 1000 ? 18 : 16,
                                       color: Colors.black87,
@@ -369,7 +369,7 @@ class _AboutState extends State<About> {
                                   height: 10,
                                 ),
                                 Text(
-                                  'MR Oil Mill is a transition of earlier S M S Oil Mill, the respective founders are Srinivasan M and Ranganathan M. As a start-up during early days the raw sesame seeds have been taken to the Mills that had fine machinery. As of now M R Oil Mill has endeavoured and toiled hard, as the result we have grown wider to use our own machineries to produce clear, healthy and pure sesame oil that is extracted from raw red, black and white sesamum indicum that is sesame seeds. The extra care comes with a double filtration process which brings out the right viscosity in a balanced ratio with pleasant, remarkably stable and edible oil.A healthy life and a healthy society behind the brand M R Oil Mill Pvt Ltd.',
+                                  'MR Oil Mill is a transition of earlier SMS Oil Mill, the respective founders are Srinivasan M and Renganathan M. As a start-up during early days the raw sesame seeds have been taken to the Mills that had fine machinery. As of now MR Oil Mill has endeavoured and toiled hard, as the result we have grown wider to use our own machineries to produce clear, healthy and pure sesame oil that is extracted from raw red, black and white sesamum indicum that is sesame seeds. The extra care comes with a double filtration process which brings out the right viscosity in a balanced ratio with pleasant, remarkably stable and edible oil. A healthy life and a healthy society behind the brand MR Oil Mill Pvt Ltd.',
                                   style: GoogleFonts.poppins(
                                       fontSize: width > 1000 ? 18 : 16,
                                       color: Colors.black87,
@@ -596,10 +596,7 @@ class _AboutState extends State<About> {
                   ),
                   Button(
                       onpress: () {
-                        Get.toNamed('/contact');
-                        setState(() {
-                          controller.index = 5;
-                        });
+                        Get.rootDelegate.toNamed('/contact');
                       },
                       text: 'Contact Us',
                       size: width > 600 ? 20 : 15),
@@ -676,7 +673,7 @@ class _AboutState extends State<About> {
                                   height: 20,
                                 ),
                                 Text(
-                                  'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                  'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                   style: GoogleFonts.poppins(
                                       fontSize: 13,
                                       color: Colors.black,
@@ -776,7 +773,7 @@ class _AboutState extends State<About> {
                                         height: 20,
                                       ),
                                       Text(
-                                        'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                        'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                         style: GoogleFonts.poppins(
                                             fontSize: 13,
                                             color: Colors.black,
@@ -872,7 +869,7 @@ class _AboutState extends State<About> {
                                     height: 20,
                                   ),
                                   Text(
-                                    'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                    'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                     style: GoogleFonts.poppins(
                                         fontSize: 13,
                                         color: Colors.black,

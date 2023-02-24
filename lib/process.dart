@@ -64,7 +64,7 @@ class _ProcessState extends State<Process> {
           DrawerTile(
             icon: const Icon(Icons.person),
             ontap: () {
-              Get.toNamed('/home');
+              Get.rootDelegate.toNamed('/');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -75,7 +75,7 @@ class _ProcessState extends State<Process> {
           DrawerTile(
             icon: const Icon(Icons.search),
             ontap: () {
-              Get.toNamed('/about');
+              Get.rootDelegate.toNamed('/about');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -86,9 +86,8 @@ class _ProcessState extends State<Process> {
           DrawerTile(
             icon: const Icon(Icons.add_box_outlined),
             ontap: () {
+              Get.rootDelegate.toNamed('/products');
               setState(() {
-                Get.toNamed('/products');
-
                 _key.currentState!.closeEndDrawer();
               });
             },
@@ -98,7 +97,7 @@ class _ProcessState extends State<Process> {
           DrawerTile(
             icon: const Icon(Icons.work_history_outlined),
             ontap: () {
-              Get.toNamed('/process');
+              Get.rootDelegate.toNamed('/process');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -109,7 +108,7 @@ class _ProcessState extends State<Process> {
           DrawerTile(
             icon: const Icon(Icons.event),
             ontap: () {
-              Get.toNamed('/benifits');
+              Get.rootDelegate.toNamed('/benifits');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -120,7 +119,7 @@ class _ProcessState extends State<Process> {
           DrawerTile(
             icon: const Icon(Icons.groups_outlined),
             ontap: () {
-              Get.toNamed('/contact');
+              Get.rootDelegate.toNamed('/contact');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -144,7 +143,7 @@ class _ProcessState extends State<Process> {
             width: 50.w,
           ),
         ),
-        title: width > 700
+        title: width > 800
             ? Row(
                 children: [
                   const Spacer(
@@ -152,7 +151,7 @@ class _ProcessState extends State<Process> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/home');
+                      Get.rootDelegate.toNamed('/');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -162,7 +161,7 @@ class _ProcessState extends State<Process> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/about');
+                      Get.rootDelegate.toNamed('/about');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -172,7 +171,7 @@ class _ProcessState extends State<Process> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/products');
+                      Get.rootDelegate.toNamed('/products');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -182,7 +181,7 @@ class _ProcessState extends State<Process> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/process');
+                      Get.rootDelegate.toNamed('/process');
                     },
                     child: const TabsWeb(
                       color: Colors.deepOrange,
@@ -192,7 +191,7 @@ class _ProcessState extends State<Process> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/benifits');
+                      Get.rootDelegate.toNamed('/benifits');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -202,7 +201,7 @@ class _ProcessState extends State<Process> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/contact');
+                      Get.rootDelegate.toNamed('/contact');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -214,7 +213,7 @@ class _ProcessState extends State<Process> {
               )
             : Container(),
         actions: [
-          width < 700
+          width < 800
               ? GestureDetector(
                   onTap: () {
                     _key.currentState!.openEndDrawer();
@@ -435,10 +434,7 @@ class _ProcessState extends State<Process> {
                   ),
                   Button(
                       onpress: () {
-                        Get.toNamed('/contact');
-                        setState(() {
-                          controller.index = 5;
-                        });
+                        Get.rootDelegate.toNamed('/contact');
                       },
                       text: 'Contact Us',
                       size: width > 600 ? 20 : 15),
@@ -515,7 +511,7 @@ class _ProcessState extends State<Process> {
                                   height: 20,
                                 ),
                                 Text(
-                                  'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                  'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                   style: GoogleFonts.poppins(
                                       fontSize: 13,
                                       color: Colors.black,
@@ -615,7 +611,7 @@ class _ProcessState extends State<Process> {
                                         height: 20,
                                       ),
                                       Text(
-                                        'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                        'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                         style: GoogleFonts.poppins(
                                             fontSize: 13,
                                             color: Colors.black,
@@ -711,7 +707,7 @@ class _ProcessState extends State<Process> {
                                     height: 20,
                                   ),
                                   Text(
-                                    'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                    'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                     style: GoogleFonts.poppins(
                                         fontSize: 13,
                                         color: Colors.black,

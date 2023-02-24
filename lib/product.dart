@@ -64,7 +64,7 @@ class _ProductState extends State<Product> {
           DrawerTile(
             icon: const Icon(Icons.person),
             ontap: () {
-              Get.toNamed('/home');
+              Get.rootDelegate.toNamed('/');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -75,7 +75,7 @@ class _ProductState extends State<Product> {
           DrawerTile(
             icon: const Icon(Icons.search),
             ontap: () {
-              Get.toNamed('/about');
+              Get.rootDelegate.toNamed('/about');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -86,7 +86,7 @@ class _ProductState extends State<Product> {
           DrawerTile(
             icon: const Icon(Icons.add_box_outlined),
             ontap: () {
-              Get.toNamed('/products');
+              Get.rootDelegate.toNamed('/products');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -97,7 +97,7 @@ class _ProductState extends State<Product> {
           DrawerTile(
             icon: const Icon(Icons.work_history_outlined),
             ontap: () {
-              Get.toNamed('/process');
+              Get.rootDelegate.toNamed('/process');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -108,7 +108,7 @@ class _ProductState extends State<Product> {
           DrawerTile(
             icon: const Icon(Icons.event),
             ontap: () {
-              Get.toNamed('/benifits');
+              Get.rootDelegate.toNamed('/benifits');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -119,7 +119,7 @@ class _ProductState extends State<Product> {
           DrawerTile(
             icon: const Icon(Icons.groups_outlined),
             ontap: () {
-              Get.toNamed('/contact');
+              Get.rootDelegate.toNamed('/contact');
               setState(() {
                 _key.currentState!.closeEndDrawer();
               });
@@ -143,7 +143,7 @@ class _ProductState extends State<Product> {
             width: 50.w,
           ),
         ),
-        title: width > 700
+        title: width > 800
             ? Row(
                 children: [
                   const Spacer(
@@ -151,7 +151,7 @@ class _ProductState extends State<Product> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/home');
+                      Get.rootDelegate.toNamed('/');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -161,7 +161,7 @@ class _ProductState extends State<Product> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/about');
+                      Get.rootDelegate.toNamed('/about');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -171,7 +171,7 @@ class _ProductState extends State<Product> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/products');
+                      Get.rootDelegate.toNamed('/products');
                     },
                     child: const TabsWeb(
                       color: Colors.deepOrange,
@@ -181,7 +181,7 @@ class _ProductState extends State<Product> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/process');
+                      Get.rootDelegate.toNamed('/process');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -191,7 +191,7 @@ class _ProductState extends State<Product> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/benifits');
+                      Get.rootDelegate.toNamed('/benifits');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -201,7 +201,7 @@ class _ProductState extends State<Product> {
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      Get.toNamed('/contact');
+                      Get.rootDelegate.toNamed('/contact');
                     },
                     child: const TabsWeb(
                       color: Colors.black,
@@ -213,7 +213,7 @@ class _ProductState extends State<Product> {
               )
             : Container(),
         actions: [
-          width < 700
+          width < 800
               ? GestureDetector(
                   onTap: () {
                     _key.currentState!.openEndDrawer();
@@ -291,7 +291,7 @@ class _ProductState extends State<Product> {
               alignment: WrapAlignment.center,
               spacing: 20,
               runSpacing: 20,
-              children: const [
+              children: [
                 SingleProductBox(
                     img: 'assets/1l.png', text1: '1 Litre', text2: "₹ 350"),
                 SingleProductBox(
@@ -309,9 +309,9 @@ class _ProductState extends State<Product> {
                     text1: '1 Litre',
                     text2: "₹ 340"),
                 SingleProductBox(
-                    img: 'assets/5l.png', text1: '5 Litre', text2: ""),
+                    img: 'assets/5l.png', text1: '5 Litre', text2: "₹ 1750"),
                 SingleProductBox(
-                    img: 'assets/15kg.png', text1: '15 Kg', text2: ""),
+                    img: 'assets/15kg.png', text1: '15 Kg', text2: "₹ 5350"),
               ],
             ),
             const SizedBox(
@@ -356,10 +356,7 @@ class _ProductState extends State<Product> {
                   ),
                   Button(
                       onpress: () {
-                        Get.toNamed('/contact');
-                        setState(() {
-                          controller.index = 5;
-                        });
+                        Get.rootDelegate.toNamed('/contact');
                       },
                       text: 'Contact Us',
                       size: width > 600 ? 20 : 15),
@@ -436,7 +433,7 @@ class _ProductState extends State<Product> {
                                   height: 20,
                                 ),
                                 Text(
-                                  'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                  'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                   style: GoogleFonts.poppins(
                                       fontSize: 13,
                                       color: Colors.black,
@@ -536,7 +533,7 @@ class _ProductState extends State<Product> {
                                         height: 20,
                                       ),
                                       Text(
-                                        'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                        'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                         style: GoogleFonts.poppins(
                                             fontSize: 13,
                                             color: Colors.black,
@@ -632,7 +629,7 @@ class _ProductState extends State<Product> {
                                     height: 20,
                                   ),
                                   Text(
-                                    'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431 2300250\nCell: 9443874258',
+                                    'No. 33/3, Anna Nagar,\nSangliyandapuram,\nTrichy - 620001.\n\nPhone: 0431-2964558\nCell: 8667035286',
                                     style: GoogleFonts.poppins(
                                         fontSize: 13,
                                         color: Colors.black,
@@ -661,30 +658,26 @@ class _ProductState extends State<Product> {
   }
 }
 
-class SingleProductBox extends StatefulWidget {
+class SingleProductBox extends StatelessWidget {
   final String img;
   final String text1;
   final String text2;
   final double? size;
 
-  const SingleProductBox(
+  SingleProductBox(
       {super.key,
       required this.img,
       required this.text1,
       required this.text2,
       this.size});
 
-  @override
-  State<SingleProductBox> createState() => _SingleProductBoxState();
-}
-
-class _SingleProductBoxState extends State<SingleProductBox> {
   final Controller controller = Get.put(Controller());
+
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 290,
-      width: widget.size ?? 250,
+      width: size ?? 250,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
@@ -705,7 +698,7 @@ class _SingleProductBoxState extends State<SingleProductBox> {
               height: 130,
               width: 200,
               child: Image.asset(
-                widget.img,
+                img,
                 fit: BoxFit.contain,
               ),
             ),
@@ -714,14 +707,14 @@ class _SingleProductBoxState extends State<SingleProductBox> {
             height: 10,
           ),
           Text(
-            widget.text1,
+            text1,
             style: GoogleFonts.poppins(
                 fontSize: 15,
                 color: Colors.black87,
                 fontWeight: FontWeight.w700),
           ),
           Text(
-            widget.text2,
+            text2,
             style: GoogleFonts.poppins(
                 fontSize: 20, color: Colors.black, fontWeight: FontWeight.w700),
           ),
@@ -730,10 +723,7 @@ class _SingleProductBoxState extends State<SingleProductBox> {
           ),
           Button(
               onpress: () {
-                Get.toNamed('/contact');
-                setState(() {
-                  controller.index = 5;
-                });
+                Get.rootDelegate.toNamed('/contact');
               },
               text: "Contact Us",
               size: 10),
